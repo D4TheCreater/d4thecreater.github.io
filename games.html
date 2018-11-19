@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Games</title>
+    <script src="assets/java/java.js"></script>
+    <link rel="stylesheet" href="assets/css/styles_main.css"></link>
+    <link rel="stylesheet" href="assets/css/styles_games.css"></link>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <header class="header-section">
+      <div class="container">
+        <!-- logo -->
+        <a class="site-logo" href="index.html">
+          <img src="img/logo.png" alt="">
+        </a>
+        <div class="user-panel">
+          <button onclick="myFunction()" class="dropbtn">My Cart</button>
+          <div id="cart" class="dropdown-content">
+            <p id="cartitem">Empty</p>
+          </div>
+        </div>
+        <!-- responsive -->
+        <div class="nav-switch">
+          <i class="fa fa-bars"></i>
+        </div>
+        <!-- site menu -->
+        <nav class="main-menu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="games.html">Games</a></li>
+            <li><a href="platforms.html">Platforms</a></li>
+            <li><a href="security.html">Security</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <select id="filt" onchange="filter()">
+        <option>Display All</option>
+        <option value="top">Top 10</option>
+        <option value="hs">Highest Selling</option>
+        <option value="hr">Highest Rated</option>
+      </select>
+
+    </header>
+
+    <a class="site-logo" href="index.html">
+      <img src="assets/images/logo.svg" alt="">
+    </a>
+
+		<div class="star-rating">
+			<input id="star-5" type="radio" name="rating" value="star-5">
+			<label for="star-5" title="5 stars">
+					<i class="active fa fa-star" aria-hidden="true"></i>
+			</label>
+			<input id="star-4" type="radio" name="rating" value="star-4">
+			<label for="star-4" title="4 stars">
+					<i class="active fa fa-star" aria-hidden="true"></i>
+			</label>
+			<input id="star-3" type="radio" name="rating" value="star-3">
+			<label for="star-3" title="3 stars">
+					<i class="active fa fa-star" aria-hidden="true"></i>
+			</label>
+			<input id="star-2" type="radio" name="rating" value="star-2">
+			<label for="star-2" title="2 stars">
+					<i class="active fa fa-star" aria-hidden="true"></i>
+			</label>
+			<input id="star-1" type="radio" name="rating" value="star-1">
+			<label for="star-1" title="1 star">
+					<i class="active fa fa-star" aria-hidden="true"></i>
+			</label>
+		</div>
+
+
+    <section class="product-section spad">
+  		<div class="container">
+  			<div class="row" id="product-filter">
+  				<div class="mix" id="top10">
+  					<div class="product-item">
+  						<figure>
+  							<img src="assets/images/Doom.jpg" alt="">
+  							<div class="pi-meta">
+  								<div class="pi-m-left">
+  									<img src="img/icons/eye.png" alt="">
+  									<p>quick view</p>
+  								</div>
+  								<div class="pi-m-right">
+  									<img src="img/icons/heart.png" alt="">
+  									<p>save</p>
+  								</div>
+  							</div>
+  						</figure>
+  						<div class="product-info">
+  							<h6>Doom</h6>
+  							<p>$39.90</p>
+  							<a href="#" onclick="addcart()" class="site-btn btn-line">ADD TO CART</a>
+  						</div>
+  					</div>
+  				</div>
+
+  				<div class="mix" id="other">
+  					<div class="product-item">
+  						<figure>
+  							<img src="assets/images/AC.jpg" alt="">
+  							<div class="bache">NEW</div>
+  							<div class="pi-meta">
+  								<div class="pi-m-left">
+  									<img src="img/icons/eye.png" alt="">
+  									<p>quick view</p>
+  								</div>
+  								<div class="pi-m-right">
+  									<img src="img/icons/heart.png" alt="">
+  									<p>save</p>
+  								</div>
+  							</div>
+  						</figure>
+  						<div class="product-info">
+  							<h6>Assassins Creed Legacy</h6>
+  							<p>$69.50</p>
+  							<a href="#" onclick="addcart()" class="site-btn btn-line">ADD TO CART</a>
+  						</div>
+  					</div>
+  				</div>
+
+  				<div class="mix" id="top10">
+  					<div class="product-item" >
+  						<figure>
+  							<img src="assets/images/Superhot.png " alt="">
+  							<div class="pi-meta">
+  								<div class="pi-m-left">
+  									<img src="img/icons/eye.png" alt="">
+  									<p>quick view</p>
+  								</div>
+  								<div class="pi-m-right">
+  									<img src="img/icons/heart.png" alt="">
+  									<p>save</p>
+  								</div>
+  							</div>
+  						</figure>
+  						<div class="product-info">
+  							<h6>Superhot</h6>
+  							<p>$19.90</p>
+  							<a href="#" onclick="addcart()" class="site-btn btn-line">ADD TO CART</a>
+  						</div>
+  					</div>
+  				</div>
+
+  				<div class="mix" id="selling">
+  					<div class="product-item">
+  						<figure>
+  							<img src="assets/images/COD 4 MW.jpg" alt="">
+  							<div class="bache sale">SALE</div>
+  							<div class="pi-meta">
+  								<div class="pi-m-left">
+  									<img src="img/icons/eye.png" alt="">
+  									<p>quick view</p>
+  								</div>
+  								<div class="pi-m-right">
+  									<img src="img/icons/heart.png" alt="">
+  									<p>save</p>
+  								</div>
+  							</div>
+  						</figure>
+  						<div class="product-info">
+  							<h6>Call of Duty MW Remastered</h6>
+  							<p>$32.20 <span>RRP 64.40</span></p>
+  							<a href="#" onclick="addcart()" class="site-btn btn-line">ADD TO CART</a>
+  						</div>
+  					</div>
+  				</div>
+
+  				<div class="mix" id="top10">
+  					<div class="product-item">
+  						<figure>
+  							<img src="assets/images/Battlefield.jpg" alt="">
+  							<div class="pi-meta">
+  								<div class="pi-m-left">
+  									<img src="img/icons/eye.png" alt="">
+  									<p>quick view</p>
+  								</div>
+  								<div class="pi-m-right">
+  									<img src="img/icons/heart.png" alt="">
+  									<p>save</p>
+  								</div>
+  							</div>
+  						</figure>
+  						<div class="product-info">
+  							<h6>Battlefield</h6>
+  							<p>$39.90</p>
+  							<a href="#" class="site-btn btn-line">ADD TO CART</a>
+  						</div>
+  					</div>
+  				</div>
+
+  				<div class="mix" id="top10">
+  					<div class="product-item">
+  						<figure>
+  							<img src="assets/images/Tomb Raider.jpg" alt="">
+  							<div class="bache">NEW</div>
+  							<div class="pi-meta">
+  								<div class="pi-m-left">
+  									<img src="img/icons/eye.png" alt="">
+  									<p>quick view</p>
+  								</div>
+  								<div class="pi-m-right">
+  									<img src="img/icons/heart.png" alt="">
+  									<p>save</p>
+  								</div>
+  							</div>
+  						</figure>
+  						<div class="product-info">
+  							<h6>Tomb Raider Trilogy</h6>
+  							<p>$100.00</p>
+  							<a href="#" class="site-btn btn-line">ADD TO CART</a>
+  						</div>
+  					</div>
+  				</div>
+
+  				<div class="mix" id="top10">
+  					<div class="product-item">
+  						<figure>
+  							<img src="assets/images/Dark Souls.jpg" alt="">
+  							<div class="pi-meta">
+  								<div class="pi-m-left">
+  									<img src="img/icons/eye.png" alt="">
+  									<p>quick view</p>
+  								</div>
+  								<div class="pi-m-right">
+  									<img src="img/icons/heart.png" alt="">
+  									<p>save</p>
+  								</div>
+  							</div>
+  						</figure>
+  						<div class="product-info">
+  							<h6>Dark Souls</h6>
+  							<p>$59.90</p>
+  							<a href="#" class="site-btn btn-line">ADD TO CART</a>
+  						</div>
+  					</div>
+  				</div>
+
+  				<div class="mix" id="other">
+  					<div class="product-item">
+  						<figure>
+  							<img src="assets/images/Fallout.jpg" alt="">
+  							<div class="pi-meta">
+  								<div class="pi-m-left">
+  									<img src="img/icons/eye.png" alt="">
+  									<p>quick view</p>
+  								</div>
+  								<div class="pi-m-right">
+  									<img src="img/icons/heart.png" alt="">
+  									<p>save</p>
+  								</div>
+  							</div>
+  						</figure>
+  						<div class="product-info">
+  							<h6>Fallout 4</h6>
+  							<p>$32.20 <span>RRP 64.40</span></p>
+  							<a href="#" class="site-btn btn-line">ADD TO CART</a>
+  						</div>
+  					</div>
+  				</div>
+
+          <div class="mix" id="rated">
+  					<div class="product-item">
+  						<figure>
+  							<img src="assets/images/Halo.jpg" alt="">
+                <div class="bache">NEW</div>
+  							<div class="pi-meta">
+  								<div class="pi-m-left">
+  									<img src="img/icons/eye.png" alt="">
+  									<p>quick view</p>
+  								</div>
+  								<div class="pi-m-right">
+  									<img src="img/icons/heart.png" alt="">
+  									<p>save</p>
+  								</div>
+  							</div>
+  						</figure>
+  						<div class="product-info">
+  							<h6>Halo Infinite</h6>
+  							<p>$72.90</p>
+  							<a href="#" class="site-btn btn-line">ADD TO CART</a>
+  						</div>
+  					</div>
+  			</div>
+
+        <div class="mix" id="top10">
+          <div class="product-item">
+            <figure>
+              <img src="assets/images/Armored Core.jpg" alt="">
+              <div class="bache sale">SALE</div>
+              <div class="pi-meta">
+                <div class="pi-m-left">
+                  <img src="img/icons/eye.png" alt="">
+                  <p>quick view</p>
+                </div>
+                <div class="pi-m-right">
+                  <img src="img/icons/heart.png" alt="">
+                  <p>save</p>
+                </div>
+              </div>
+            </figure>
+            <div class="product-info">
+              <h6>Armored Core</h6>
+              <p>$22.20</p>
+              <a href="#" class="site-btn btn-line">ADD TO CART</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mix" id="top10">
+          <div class="product-item">
+            <figure>
+              <img src="assets/images/Batman.jpg" alt="">
+              <div class="bache sale">SALE</div>
+              <div class="pi-meta">
+                <div class="pi-m-left">
+                  <img src="img/icons/eye.png" alt="">
+                  <p>quick view</p>
+                </div>
+                <div class="pi-m-right">
+                  <img src="img/icons/heart.png" alt="">
+                  <p>save</p>
+                </div>
+              </div>
+            </figure>
+            <div class="product-info">
+              <h6>Batman</h6>
+              <p>$44.20</p>
+              <a href="#" class="site-btn btn-line">ADD TO CART</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mix" id="other">
+          <div class="product-item">
+            <figure>
+              <img src="assets/images/Company of Heroes 2.jpg" alt="">
+              <div class="bache sale">SALE</div>
+              <div class="pi-meta">
+                <div class="pi-m-left">
+                  <img src="img/icons/eye.png" alt="">
+                  <p>quick view</p>
+                </div>
+                <div class="pi-m-right">
+                  <img src="img/icons/heart.png" alt="">
+                  <p>save</p>
+                </div>
+              </div>
+            </figure>
+            <div class="product-info">
+              <h6>Company of Heroes 2</h6>
+              <p>$12.50</p>
+              <a href="#" class="site-btn btn-line">ADD TO CART</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mix" id="top10">
+          <div class="product-item">
+            <figure>
+              <img src="assets/images/Dead Space.jpg" alt="">
+              <div class="bache sale">SALE</div>
+              <div class="pi-meta">
+                <div class="pi-m-left">
+                  <img src="img/icons/eye.png" alt="">
+                  <p>quick view</p>
+                </div>
+                <div class="pi-m-right">
+                  <img src="img/icons/heart.png" alt="">
+                  <p>save</p>
+                </div>
+              </div>
+            </figure>
+            <div class="product-info">
+              <h6>Dead Space</h6>
+              <p>$22.70</p>
+              <a href="#" class="site-btn btn-line">ADD TO CART</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mix" id="top10">
+          <div class="product-item">
+            <figure>
+              <img src="assets/images/Deus Ex.jpg" alt="">
+
+              <div class="pi-meta">
+                <div class="pi-m-left">
+                  <img src="img/icons/eye.png" alt="">
+                  <p>quick view</p>
+                </div>
+                <div class="pi-m-right">
+                  <img src="img/icons/heart.png" alt="">
+                  <p>save</p>
+                </div>
+              </div>
+            </figure>
+            <div class="product-info">
+              <h6>Deus Ex: Mankind Divided</h6>
+              <p>$62.50</p>
+              <a href="#" class="site-btn btn-line">ADD TO CART</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mix" id="top10">
+          <div class="product-item">
+            <figure>
+              <img src="assets/images/Far Cry Primal.jpg" alt="">
+              <div class="bache sale">SALE</div>
+              <div class="pi-meta">
+                <div class="pi-m-left">
+                  <img src="img/icons/eye.png" alt="">
+                  <p>quick view</p>
+                </div>
+                <div class="pi-m-right">
+                  <img src="img/icons/heart.png" alt="">
+                  <p>save</p>
+                </div>
+              </div>
+            </figure>
+            <div class="product-info">
+              <h6>Far Cry Primal</h6>
+              <p>$45.30</p>
+              <a href="#" class="site-btn btn-line">ADD TO CART</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mix" id="other">
+          <div class="product-item">
+            <figure>
+              <img src="assets/images/Harry Potter.jpg" alt="">
+              <div class="pi-meta">
+                <div class="pi-m-left">
+                  <img src="img/icons/eye.png" alt="">
+                  <p>quick view</p>
+                </div>
+                <div class="pi-m-right">
+                  <img src="img/icons/heart.png" alt="">
+                  <p>save</p>
+                </div>
+              </div>
+            </figure>
+            <div class="product-info">
+              <h6>Harry Potter</h6>
+              <p>$2.20</p>
+              <a href="#" class="site-btn btn-line">ADD TO CART</a>
+            </div>
+          </div>
+        </div>
+  		</div>
+  	</section>
+  </body>
+</html>
