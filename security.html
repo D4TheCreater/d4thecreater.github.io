@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Security</title>
+    <script src="assets/java/java.js"></script>
+    <link rel="stylesheet" href="assets/css/styles_main.css"></link>
+    <link rel="stylesheet" href="assets/css/styles_platform.css"></link>
+  </head>
+  <body>
+    <header class="header-section">
+      <div class="container">
+        <!-- logo -->
+        <a class="site-logo" href="index.html">
+          <img src="img/logo.png" alt="">
+        </a>
+        <div class="user-panel">
+          <button onclick="myCart()" class="dropbtn">My Cart</button>
+          <div id="cart" class="dropdown-content">
+            <p id="IWC">IWC W/ NV - $300</p>
+            <p id="OWC">OWC - $350</p>
+            <p id="ICC">ICC W/ NV - $270</p>
+            <p id="DMC">DMC - $155</p>
+            <p id="CMC">CMC W/ NV - $800</p>
+            <p id="PMC">PMC W/ OB - $200</p>
+            <a href="https://www.paypal.me/DylanFourie">Checkout</a>
+          </div>
+        </div>
+
+        <!-- responsive -->
+        <div class="nav-switch">
+          <button onclick="respmenu()" class="dropbtn">Menu</button>
+          <div id="respomenu" class="dropdown-content">
+            <a href="index.html">Home</a>
+            <a href="games.html">Games</a>
+            <a href="platforms.html">Platforms</a>
+            <a href="security.html">Security</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+        <!-- site menu -->
+        <nav class="main-menu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="games.html">Games</a></li>
+            <li><a href="platforms.html">Platforms</a></li>
+            <li><a href="security.html">Security</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+      </div>
+    </header>
+
+    <a class="site-logo" href="index.html">
+      <img src="assets/images/logo.svg" alt="">
+    </a>
+
+    <div class="featured-section">
+  		<div class="fcontainer">
+  			<div class="row">
+  				<div class="col">
+  					<div class="featured-item">
+  						<img src="assets/images/amc.jpg" alt="">
+  						<a href="#" class="site-btn" onclick="addIWC()">add to cart</a>
+  					</div>
+            <article>An indoor wall mounted camera starting at $300. It features
+             night vision and a swivel arm for more versatility.
+            </article>
+  				</div>
+  				<div class="col">
+  					<div class="featured-item mb-0">
+  						<img src="assets/images/omc.jpg" alt="">
+  						<a href="#" class="site-btn" onclick="addOWC()">add to cart</a>
+  					</div>
+            <article>An outdoor wall mounted camera starting at $350. It features
+             night vision and a swivel arm for more versatility.
+            </article>
+  				</div>
+          <div class="col">
+  					<div class="featured-item">
+  						<img src="assets/images/sdc.jpg" alt="">
+  						<a href="#" class="site-btn" onclick="addICC()">add to cart</a>
+  					</div>
+            <article>An indoor ceiling mounted camera with a 360 degree field of view and night vision starting at $270.
+            </article>
+  				</div>
+          <div class="col">
+  					<div class="featured-item">
+  						<img src="assets/images/gmc.jpg" alt="">
+  						<a href="#" class="site-btn" onclick="addDMC()">add to cart</a>
+  					</div>
+            <article>A stylish desk mounted camera starting at $155.
+            </article>
+  				</div>
+          <div class="col">
+  					<div class="featured-item">
+  						<img src="assets/images/unc.jpg" alt="">
+  						<a href="#" class="site-btn" onclick="addCMC()">add to cart</a>
+  					</div>
+            <article>An advanced ceiling mounted camera with military grade night vision starting at $800.
+            </article>
+  				</div>
+          <div class="col">
+  					<div class="featured-item">
+  						<img src="assets/images/sotac.jpg" alt="">
+  						<a href="#" class="site-btn" onclick="addPMC()">add to cart</a>
+  					</div>
+            <article>Basic outdoor waterproof cameras with onboard storage starting at $200.
+            </article>
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+  </body>
+</html>
